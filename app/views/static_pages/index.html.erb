@@ -1,0 +1,9 @@
+<h1>Flickr Photo Viewer</h1>
+
+<%= render 'search_form' %>
+
+<% if @photos %>
+  <% @photos.each do |photo| %>
+    <%= image_tag "#{Flickr.url_n(photo)}" %>
+  <% end %>
+<% end %>
